@@ -16,5 +16,9 @@ namespace BlazorWebAssem.ToDoList.Pages
             List.Add(reqModel);
             reqModel = new TodoListModel();
         }
+        private void Cancel()
+        {
+            reqModel = new TodoListModel();
+        }
     }
 }

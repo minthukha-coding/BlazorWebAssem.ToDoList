@@ -7,9 +7,13 @@
   <input type="text" @bind-value = "reqModel.TaskName" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 </div>
 
-<button type="button" class="btn btn-danger">Cancel</button>
+<button type="button" @onclick=Cancel class="btn btn-danger">Cancel</button>
 <button type="button" @onclick=Add class="btn btn-primary">Add</button>
 
-<p>
-    @reqModel.TaskName
-</p>
+
+@foreach( var item in List)
+{
+    <p>
+        @item.TaskName
+    </p>
+}
