@@ -20,5 +20,9 @@ namespace BlazorWebAssem.ToDoList.Pages
         {
             reqModel = new TodoListModel();
         }
+        private void Remove(string id)
+        {
+            List = List.Where(x => x.Id != id).ToList();
+        }
     }
 }
