@@ -1,0 +1,15 @@
+﻿@page "/todo"
+
+<h3>Todo</h3>
+
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"></span>
+  <input type="text" @bind-value = "reqModel.TaskName" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+
+<button type="button" class="btn btn-danger">Cancel</button>
+<button type="button" @onclick=Add class="btn btn-primary">Add</button>
+
+<p>
+    @reqModel.TaskName
+</p>
